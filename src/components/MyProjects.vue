@@ -3,7 +3,7 @@
   <v-row style="margin-top: 60px; margin-bottom: 30px">
     <v-col>
       <div class="bg justify-center align-center">
-        <h2 style="font-size: 100px;transform: scale(.7, 1); color:primary; font-family:vogue; width: fit-content; padding-left: 50px; padding-right: 50px" class="pic-ani">PROJECTS</h2>
+        <p style="transform: scale(.7, 1); color:primary; font-family:vogue; width: fit-content; padding-left: 50px; padding-right: 50px" class="pic-ani about">PROJECTS</p>
       </div>
     </v-col>
   </v-row>
@@ -115,9 +115,6 @@ a {
 }
 
 .bg {
-  /* background-image: url('../assets/edu2.jpg'); */
-  background-size: cover;
-  background-position: center center;
   height: 200px;
 }
 .box {
@@ -125,6 +122,7 @@ a {
   min-width: 400px; 
   padding: 0px;
 }
+
 </style>
 <style>
 

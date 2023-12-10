@@ -38,6 +38,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow-x: hidden;
   /* margin-top: 60px; */
 }
 
@@ -81,7 +82,7 @@ export default {
     max-height: 60px;
   }
   p.about {
-    font-size: 20vw;
+    font-size: 15vw;
   }
   .v-row.welcome-row {
     margin-left: 17%;
@@ -185,4 +186,5 @@ export default {
     transform: translateX(-100%);
   }
 }
+
 </style>

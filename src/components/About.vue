@@ -1,5 +1,5 @@
 <template>
-<v-container style="min-height: 100vh; max-height: fit-content;padding-top:100px;">
+<v-container style="max-height: fit-content;padding-top:100px;">
   <v-row>
     <v-col>
       <v-row class="justify-center align-center"> 
@@ -17,6 +17,7 @@
           >
             <v-sheet
               height="100%"
+              width="fit-content"
               style="margin-left:100px;margin-right:100px; background: transparent; margin-top: 50px"
             >
               <div class="fill-height justify-center align-center">
@@ -102,7 +103,7 @@ a {
   background-image: url('../assets/edu2.jpg');
   background-size: cover;
   background-position: center center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   height: fit-content;
 }
 /* .v-img__img--contain{
@@ -123,18 +124,20 @@ a {
 }
 .bg {
     background-size: cover;
-  min-height: 100vh; 
+  /* min-height: 100vh;  */
   height: fit-content;
 }
-
-@media screen and (max-width: 500px) {
+.v-row{
+  margin: 0px;
+}
+/* @media screen and (max-width: 500px) {
   div {
     font-size: 5vw;
   }
   p.letter {
     font-size: 20vw;
   }
-}
+} */
 
 
 

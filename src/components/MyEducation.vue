@@ -1,11 +1,11 @@
 
 <template>
-<div style="height: 20vh;padding-top: 80px; padding-bottom: 40px" class="justify-center align-center d-flex" id="my-education">
-    <div style="width: fit-content">
-    <v-row align="center" justify="center">
-      <p style="font-size: 28px; letter-spacing: 10px" class="animated"><i>"Contentment is my goal. Curiosity is my drive. Learning is my tool."</i></p>
+<div id="my-education" style="padding-top: 80px; padding-bottom: 20px" >
+    <v-row class="justify-center align-center d-flex">
+      <p style="font-size: 28px; letter-spacing: 10px" :class="{animated: isAnimated}"><i>"Contentment is my goal. Curiosity is my drive. Learning is my tool."</i></p>
     </v-row>
     </div>
+<div class="justify-center align-center d-flex" >
   </div>
 <v-row class="justify-center align-center d-flex" style="padding-top: 80px; margin-bottom: 100px">
 <v-col>
@@ -82,8 +82,14 @@ export default {
           title: "M.Sc. Educational Technology"
         },
       ],
+      isAnimated: false
     }
   },
+  mounted(){
+    if (window.innerWidth >= 1400){
+      this.isAnimated = true;
+    }
+  }
   
 }
 </script>
@@ -110,7 +116,7 @@ a {
   width: 100% !important;
   height: 100vh;
   max-height: fit-content;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* max-height: 750px; */
   background-position: center center;
   padding: 0px;
@@ -143,5 +149,8 @@ a {
     align-content: center;
     justify-content: center;
   }
+}
+.v-row {
+  margin: 0px;
 }
 </style>

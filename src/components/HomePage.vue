@@ -112,8 +112,7 @@ a {
   background-size: cover;
   width: 100% !important;
   height: 100vh;
-  max-height: 100vh;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* max-height: 750px; */
   background-position: center center;
   padding: 0px;

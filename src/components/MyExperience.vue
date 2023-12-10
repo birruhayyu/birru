@@ -2,7 +2,7 @@
 <div id="my-experience">
     <p id="scroll-text" style="font-size: 250px; z-index: 3; color: grey;">EXPERIENCE</p>
   </div>
-  <div style="min-height: 100vh; max-height: fit-content; width: 100%">
+  <div style="max-height: fit-content; width: 100%">
     <v-row class="d-flex justify-center align-center experience" style="width: fit-content">
       <v-col>
         <v-row class="d-flex justify-center align-center">
@@ -109,7 +109,7 @@
         </v-row>
       </v-col>
     </v-row>
-    <v-row class="justify-center align-center" style="height: 5vw; padding-top: 100px">
+    <v-row class="justify-center align-center" style="height: 5vw; padding-top: 100px; padding-bottom: 80px">
       <p style="font-size: 28px; letter-spacing: 10px"><i>"I believe in hard work"</i></p>
     </v-row>
   </div>
