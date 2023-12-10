@@ -93,8 +93,14 @@ export default {
   h2.title {
     font-size: 30vw;
   }
+  p.scroll-ani {
+    font-size: 100px;
+  }
 }
 @media screen and (min-width: 530px) and (max-width: 900px) {
+  p.scroll-ani {
+    font-size: 150px;
+  }
   p.letter {
     font-size: 7vw;
     max-height: 50px;
@@ -117,6 +123,9 @@ export default {
 }
 
 @media screen and (min-width: 900px) {
+  p.scroll-ani {
+    font-size: 250px;
+  }
   p.letter {
     font-size: 5vw;
     max-height: 85px;
@@ -157,9 +166,9 @@ export default {
   -webkit-transform: translateX(100%);
   transform: translateX(-100%);
   
-  -moz-animation: my-animation 15s linear infinite;
-  -webkit-animation: my-animation 15s linear infinite;
-  animation: my-animation 15s linear infinite;
+  -moz-animation: my-animation 10s linear infinite;
+  -webkit-animation: my-animation 10s linear infinite;
+  animation: my-animation 10s linear infinite;
 }
 
 /* for Firefox */

@@ -7,7 +7,7 @@
       </div>
     </v-col>
   </v-row>
-  <v-row class="d-flex justify-center align-center">
+  <v-row class="d-flex justify-center align-center margin-remove">
     <v-col cols="4" class="box">
       <img :src="require('../assets/langu.jpg')" style="object-fit:cover; width: 100%; height: 100%">
     </v-col>
@@ -20,7 +20,7 @@
       </v-sheet>
     </v-col>
   </v-row>
-  <v-row class="d-flex justify-center align-center">
+  <v-row class="d-flex justify-center align-center margin-remove">
     <v-col cols="4" class="box">
       <v-sheet elevation="2" style="width: 100%; height: 100%; padding:15px">
         <v-list-item-title class="project-title">{{projects[0].title}}</v-list-item-title>
@@ -33,7 +33,7 @@
       <img :src="require('../assets/data2.jpg')" style="object-fit:cover; width: 100%; height: 100%">
     </v-col>
   </v-row>
-  <v-row class="d-flex justify-center align-center">
+  <v-row class="d-flex justify-center align-center margin-remove">
     <v-col cols="4" class="box">
       <img :src="require('../assets/troubleshoot.jpg')" style="object-fit:cover; width: 100%; height: 100%">
     </v-col>
@@ -46,7 +46,7 @@
       </v-sheet>
     </v-col>
   </v-row>
-  <v-row class="d-flex justify-center align-center">
+  <v-row class="d-flex justify-center align-center margin-remove">
     <v-col cols="4" class="box">
       <v-sheet elevation="2" style="width: 100%; height: 100%; padding:15px">
         <v-list-item-title class="project-title">{{projects[2].title}}</v-list-item-title>
@@ -162,5 +162,8 @@ a {
     75% {
         clip-path: inset(0 0 0 95%);
     }
+}
+.v-row.margin-remove {
+  margin: 0px;
 }
 </style>

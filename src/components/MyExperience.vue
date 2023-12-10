@@ -1,18 +1,17 @@
 <template>
 <div id="my-experience">
-    <p id="scroll-text" style="font-size: 250px; z-index: 3; color: grey;">EXPERIENCE</p>
+    <p id="scroll-text" class="scroll-ani" style="color: grey;">EXPERIENCE</p>
   </div>
   <div style="max-height: fit-content; width: 100%">
     <v-row class="d-flex justify-center align-center experience" style="width: fit-content">
       <v-col>
-        <v-row class="d-flex justify-center align-center">
+        <v-row class="d-flex justify-center align-center" style="width: 100%">
         <v-hover v-slot="{ isHovering, props }">
           <v-card v-if="!aboutme" class="thumbnails" v-bind="props" @click="aboutme = true">
             <v-img
               :aspect-ratio="9/16"
               cover
               :src="require('../assets/me.jpg')"
-              style="z-index: 2;"
             >
               <v-expand-transition>
                 <div

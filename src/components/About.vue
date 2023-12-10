@@ -8,7 +8,7 @@
           hide-delimiters
           progress="warning"
           show-arrows
-          style="width: fit-content"
+          style="width: fit-content; height: fit-content; min-height: 500px"
         >
           <v-carousel-item
             v-for="(slide, i) in slides"
@@ -16,7 +16,7 @@
             width="500"
           >
             <v-sheet
-              height="100%"
+              height="fit-content"
               width="fit-content"
               style="margin-left:100px;margin-right:100px; background: transparent; margin-top: 50px"
             >
