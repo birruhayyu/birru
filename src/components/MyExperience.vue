@@ -181,10 +181,22 @@ a {
   opacity: 0.6;
   text-align: center;
 }
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1212px) {
     .v-row.experience {
-    padding-left: calc((100vw - 1150px)/2);
-    padding-right: calc((100vw - 1150px)/2);
+    padding-left: calc((100vw - 1212px)/2);
+    /* padding-right: calc((100vw - 1150px)/2); */
   }
+}
+@media screen and (max-width: 450px) {
+    .v-col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .thumbnails {
+    margin: 0;
+  }
+}
+.v-row{
+  margin: 0px;
 }
 </style>

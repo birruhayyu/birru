@@ -72,8 +72,8 @@ export default {
       } else{
         window.location.href = div;
       }
-      e.preventDefault();
-      e.stopPropagation(); 
+      // e.preventDefault();
+      // e.stopPropagation(); 
     },
     mailTo(){
       location.href='mailto:birru.hayyu@gmail.com';
