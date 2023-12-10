@@ -1,7 +1,7 @@
 <template>
   <HomePage id="home" class="section"/>
   <AboutYou id="about-me" class="section"/>
-  <MyEducation class="section-half"/>
+  <MyEducation class="section"/>
   <MyExperience class="section"/>
   <MyProjects id="my-project"/>
   <MyFooter/>
@@ -166,9 +166,9 @@ export default {
   -webkit-transform: translateX(100%);
   transform: translateX(-100%);
   
-  -moz-animation: my-animation 10s linear infinite;
-  -webkit-animation: my-animation 10s linear infinite;
-  animation: my-animation 10s linear infinite;
+  -moz-animation: my-animation 12s linear infinite;
+  -webkit-animation: my-animation 12s linear infinite;
+  animation: my-animation 12s linear infinite;
 }
 
 /* for Firefox */

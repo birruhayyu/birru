@@ -1,12 +1,12 @@
 
 <template>
-<div id="my-education" style="padding-top: 80px; padding-bottom: 20px" >
-    <v-row class="justify-center align-center d-flex">
-      <p style="font-size: 28px; letter-spacing: 10px" :class="{animated: isAnimated}"><i>"Contentment is my goal. Curiosity is my drive. Learning is my tool."</i></p>
+<div  id="my-education" >
+    <v-row class="justify-center align-center" style="width: 100%; padding-top: 80px">
+      <p style="font-size: 24px; letter-spacing: 10px; width: fit-content"><i>"Contentment is my goal.<br>Curiosity is my drive.<br>Learning is my tool."</i></p>
     </v-row>
     </div>
-<div class="justify-center align-center d-flex" >
-  </div>
+<!-- <div class="justify-center align-center d-flex" >
+  </div> -->
 <v-row class="justify-center align-center d-flex" style="padding-top: 80px; margin-bottom: 100px">
 <v-col>
   <v-row class="justify-center align-center">

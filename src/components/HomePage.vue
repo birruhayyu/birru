@@ -66,7 +66,7 @@ export default {
   },
   methods:{
     redirect(e, div){
-      if (div == '#home' || div == '#my-education' || div == '#my-experience' ){
+      if (div == '#home' || div == '#my-experience' ){
         window.location.href = div;
         window.location.reload();
       } else{
