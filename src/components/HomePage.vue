@@ -66,12 +66,13 @@ export default {
   },
   methods:{
     redirect(e, div){
-      if (div == '#home' || div == '#my-experience' ){
-        window.location.href = div;
-        window.location.reload();
-      } else{
-        window.location.href = div;
-      }
+      window.location.href = div;
+      // if (div == '#home' || div == '#my-experience' ){
+      //   window.location.href = div;
+        // window.location.reload();
+      // } else{
+      //   window.location.href = div;
+      // }
       // e.preventDefault();
       // e.stopPropagation(); 
     },
