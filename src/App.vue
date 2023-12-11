@@ -83,7 +83,7 @@ export default {
     max-height: 60px;
   }
   p.about {
-    font-size: 15vw;
+    font-size: 18vw;
   }
   .v-row.welcome-row {
     margin-left: 17%;
@@ -196,5 +196,9 @@ export default {
     transform: translateX(-100%);
   }
 }
-
+.attribution {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
 </style>

@@ -8,8 +8,12 @@
     </v-col>
   </v-row>
   <v-row class="d-flex justify-center align-center margin-remove">
-    <v-col cols="4" class="box">
-      <img :src="require('../assets/langu.jpg')" style="object-fit:cover; width: 100%; height: 100%">
+    <v-col cols="4" :class="{box: !isSmall, small: isSmall}">
+      <v-img :src="require('../assets/lang.jpg')" style="object-fit:cover; width: 100%; height: 100%" cover>
+      <div class="attribution" style="opacity: 0.7;color: white">
+        Photo by <a href="https://unsplash.com/@leookubo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Leonardo Toshiro Okubo</a> on <a href="https://unsplash.com/photos/unknown-person-writing-on-chalkboard-jBSTNenQxok?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      </div>
+      </v-img>
     </v-col>
     <v-col cols="4" class="box">
       <v-sheet elevation="2" style="width: 100%; height: 100%; padding:15px">
@@ -21,8 +25,12 @@
     </v-col>
   </v-row>
   <v-row class="d-flex justify-center align-center margin-remove">
-    <v-col cols="4" class="box" v-if="isSmall">
-      <img :src="require('../assets/data2.jpg')" style="object-fit:cover; width: 100%; height: 100%">
+    <v-col cols="4" class="small" v-if="isSmall">
+      <v-img :src="require('../assets/data2.jpg')" style="object-fit:cover; width: 100%; height: 100%" :class="{small: isSmall}">
+      <div class="attribution" style="opacity: 0.7; color: white">
+        Photo by <a href="https://unsplash.com/@mjessier?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Myriam Jessier</a> on <a href="https://unsplash.com/photos/person-using-macbook-pro-on-black-table-eveI7MOcSmw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      </div>
+      </v-img>
     </v-col>
     <v-col cols="4" class="box">
       <v-sheet elevation="2" style="width: 100%; height: 100%; padding:15px">
@@ -33,12 +41,20 @@
       </v-sheet>
     </v-col>
     <v-col cols="4" class="box" v-if="!isSmall">
-      <img :src="require('../assets/data2.jpg')" style="object-fit:cover; width: 100%; height: 100%">
+      <v-img :src="require('../assets/data2.jpg')" style="object-fit:cover; width: 100%; height: 100%" :class="{small: isSmall}">
+      <div class="attribution" style="opacity: 0.7; color: white">
+        Photo by <a href="https://unsplash.com/@mjessier?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Myriam Jessier</a> on <a href="https://unsplash.com/photos/person-using-macbook-pro-on-black-table-eveI7MOcSmw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      </div>
+      </v-img>
     </v-col>
   </v-row>
   <v-row class="d-flex justify-center align-center margin-remove">
-    <v-col cols="4" class="box">
-      <img :src="require('../assets/troubleshoot.jpg')" style="object-fit:cover; width: 100%; height: 100%">
+    <v-col cols="4" :class="{box: !isSmall, small: isSmall}">
+      <v-img :src="require('../assets/troubleshoot.jpg')" style="object-fit:cover; width: 100%; height: 100%" :class="{small: isSmall}">
+      <div class="attribution" style="opacity: 0.7; color: white">
+      Photo by <a href="https://unsplash.com/@bermixstudio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Bermix Studio</a> on <a href="https://unsplash.com/photos/a-phone-with-a-stethoscope-on-top-of-it-l8uCymHXI-g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      </div>
+      </v-img>
     </v-col>
     <v-col cols="4" class="box">
       <v-sheet elevation="2" style="width: 100%; height: 100%; padding:15px">
@@ -50,8 +66,12 @@
     </v-col>
   </v-row>
   <v-row class="d-flex justify-center align-center margin-remove">
-    <v-col cols="4" class="box" v-if="isSmall">
-      <img :src="require('../assets/weight.jpg')" style="object-fit:cover; width: 100%; height: 100%">
+    <v-col cols="4" class="small" v-if="isSmall">
+      <v-img :src="require('../assets/weight.jpg')" style="object-fit:cover; width: 100%; height: 100%" :class="{small: isSmall}">
+      <div class="attribution" style="opacity: 0.7; color: white">
+       Photo by <a href="https://unsplash.com/@bermixstudio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Bermix Studio</a> on <a href="https://unsplash.com/photos/a-phone-with-a-stethoscope-on-top-of-it-l8uCymHXI-g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      </div>
+      </v-img>
     </v-col>
     <v-col cols="4" class="box">
       <v-sheet elevation="2" style="width: 100%; height: 100%; padding:15px">
@@ -62,7 +82,11 @@
       </v-sheet>
     </v-col>
     <v-col cols="4" class="box" v-if="!isSmall">
-      <img :src="require('../assets/weight.jpg')" style="object-fit:cover; width: 100%; height: 100%">
+      <v-img :src="require('../assets/weight.jpg')" style="object-fit:cover; width: 100%; height: 100%" :class="{small: isSmall}">
+      <div class="attribution" style="opacity: 0.7; color: white">
+        Photo by <a href="https://unsplash.com/@victorfreitas?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Victor Freitas</a> on <a href="https://unsplash.com/photos/person-locking-gym-plates-on-barbell-KIzBvHNe7hY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      </div> 
+      </v-img>
     </v-col>
   </v-row>
  </v-container> 
@@ -133,6 +157,12 @@ a {
   height: 400px; 
   min-width: 400px; 
   padding: 0px;
+}
+.small {
+  height: 100%;
+  min-width: 400px; 
+  padding: 0px;
+  
 }
 
 </style>

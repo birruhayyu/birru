@@ -39,6 +39,9 @@
     <p class="animated welcome" style="font-family:vogue">Junior Full-stack developer.</p>
   </v-col>
 </v-row>
+<div class="attribution">
+  Photo by <a href="https://unsplash.com/@fempreneurstyledstock?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Leone Venter</a> on <a href="https://unsplash.com/photos/magic-keyboard-beside-mug-and-click-pen-VieM9BdZKFo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+</div>
 </div>
 </template>
 

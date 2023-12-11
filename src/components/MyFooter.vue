@@ -14,9 +14,9 @@
       ></v-btn>
     </div>
 
-    <div class="pt-0">
+    <!-- <div class="pt-0">
       Special thanks to the amazing photos taken by: Leone Venter, Victor Freitas, Bermix Studio, Myriam Jessier, Ivan Shilov, Aaron Weiss, Clément Hélardot, Olia Gozha, and charlesdeluvio on Unsplash.
-    </div>
+    </div> -->
 
   </div>
 </template>
