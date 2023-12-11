@@ -15,7 +15,7 @@
             >
               <v-expand-transition>
                 <div
-                  v-if="isHovering"
+                  v-if="isHovering || isSmall"
                   class="d-flex transition-fast-in-fast-out black-trans v-card--reveal text-h3 align-center justify-center text-shades-white"
                   style="height: 100%"
                 >
@@ -49,7 +49,7 @@
             >
               <v-expand-transition>
                 <div
-                  v-if="isHovering"
+                  v-if="isHovering || isSmall"
                   class="d-flex transition-fast-in-fast-out black-trans v-card--reveal text-h3 align-center justify-center text-shades-white"
                   style="height: 100%;"
                 >
@@ -84,7 +84,7 @@
             >
               <v-expand-transition>
                 <div
-                  v-if="isHovering"
+                  v-if="isHovering || isSmall"
                   class="d-flex transition-fast-in-fast-out black-trans v-card--reveal text-h3 align-center justify-center text-shades-white"
                   style="height: 100%;"
                 >
@@ -130,6 +130,12 @@ export default {
         {"time": "April 2021 - Sept 2023", "place": "Germany", "company": "Ianeo solutions Gmbh", "title": "Working student", "title2": "(Software development)", "tasks": ["Develop front-end using VueJs, HTML, Javascript, and CSS", "Develop APIs","Integrate SQL database, back-end, and front-end code", "Develop back-end using NodeJs and PYTHON", "Debug and troubleshoot", "Maintain and clean code"]},
         {"time": "September 2023 - Now", "place": "Germany", "company": "Ianeo solutions Gmbh", "title": "Web/software developer", "tasks": ['Develop a web application','Develop backend using PHP', 'Develop plugins with Javascript', 'Develop front-end using HTML, CSS; and Twig', 'Learn new technology in Shopware']},
       ],
+      isSmall: false,
+    }
+  },
+  mounted(){
+    if (window.innerWidth < 900){
+      this.isSmall = true;
     }
   }
 }

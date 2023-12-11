@@ -21,6 +21,9 @@
     </v-col>
   </v-row>
   <v-row class="d-flex justify-center align-center margin-remove">
+    <v-col cols="4" class="box" v-if="isSmall">
+      <img :src="require('../assets/data2.jpg')" style="object-fit:cover; width: 100%; height: 100%">
+    </v-col>
     <v-col cols="4" class="box">
       <v-sheet elevation="2" style="width: 100%; height: 100%; padding:15px">
         <v-list-item-title class="project-title">{{projects[0].title}}</v-list-item-title>
@@ -29,7 +32,7 @@
         <p><b>Technology/Language: </b> {{projects[0].technology}}</p> 
       </v-sheet>
     </v-col>
-    <v-col cols="4" class="box">
+    <v-col cols="4" class="box" v-if="!isSmall">
       <img :src="require('../assets/data2.jpg')" style="object-fit:cover; width: 100%; height: 100%">
     </v-col>
   </v-row>
@@ -47,6 +50,9 @@
     </v-col>
   </v-row>
   <v-row class="d-flex justify-center align-center margin-remove">
+    <v-col cols="4" class="box" v-if="isSmall">
+      <img :src="require('../assets/weight.jpg')" style="object-fit:cover; width: 100%; height: 100%">
+    </v-col>
     <v-col cols="4" class="box">
       <v-sheet elevation="2" style="width: 100%; height: 100%; padding:15px">
         <v-list-item-title class="project-title">{{projects[2].title}}</v-list-item-title>
@@ -55,7 +61,7 @@
         <p><b>Technology/Language: </b> {{projects[2].technology}}</p> 
       </v-sheet>
     </v-col>
-    <v-col cols="4" class="box">
+    <v-col cols="4" class="box" v-if="!isSmall">
       <img :src="require('../assets/weight.jpg')" style="object-fit:cover; width: 100%; height: 100%">
     </v-col>
   </v-row>
@@ -80,7 +86,13 @@ export default {
       data: false,
       lang: false,
       excalibur: false,
-      train: false
+      train: false,
+      isSmall: false
+    }
+  },
+  mounted(){
+    if (window.innerWidth < 820){
+      this.isSmall = true;
     }
   }
 }

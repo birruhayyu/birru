@@ -125,7 +125,7 @@ export default {
 
 @media screen and (min-width: 900px) {
   p.scroll-ani {
-    font-size: 250px;
+    font-size: 200px;
   }
   p.letter {
     font-size: 5vw;
