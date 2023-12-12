@@ -57,7 +57,7 @@ export default {
       small_screen: false,
       widthWindow: 0,
       heightWindow: 0,
-      items: [{'title': 'Home', 'id': '#home'}, {'title': 'About Me', 'id': '#about-me'}, {'title': 'Education', 'id': '#my-education'}, {'title': 'Experience', 'id': '#my-experience'}, {'title': 'Projects', 'id': '#my-project'}, {'title': 'Hire Me', 'id': 'mailto:birru.hayyu@gmail.com'}, {'title': 'Download CV', 'id': '../files/CV_Birru.pdf'}]
+      items: [{'title': 'Home', 'id': '#home'}, {'title': 'About Me', 'id': '#about-me'}, {'title': 'Education', 'id': '#my-education'}, {'title': 'Experience', 'id': '#my-experience'}, {'title': 'Projects', 'id': '#my-project'}, {'title': 'Hire Me', 'id': 'mailto:birru.hayyu@gmail.com'}, {'title': 'Download CV', 'id': '../files/resume.pdf'}]
     }
   },
   unmounted() {
