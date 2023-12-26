@@ -1,5 +1,6 @@
 <template>
 <div id="home" class="bg">
+ <div>
 <v-toolbar class="toolbar">
   <v-toolbar-items v-if="!small_screen">
     <v-btn v-for="item in items" :key="item.title"  @click="redirect($event, item.id)" flat>{{item.title}}</v-btn>
@@ -39,8 +40,11 @@
     <p class="animated welcome" style="font-family:vogue">Junior Full-stack developer.</p>
   </v-col>
 </v-row>
-<div class="attribution">
-  Photo by <a href="https://unsplash.com/@fempreneurstyledstock?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Leone Venter</a> on <a href="https://unsplash.com/photos/magic-keyboard-beside-mug-and-click-pen-VieM9BdZKFo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ </div>
+ <div style="width: 100%; text-align: center; bottom: 10px; position: absolute">
+<div class="attribution" style="color: black; height: fit-content">
+  Photo by <a style="color: black; text-decoration: none" href="https://unsplash.com/@fempreneurstyledstock?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Leone Venter</a> on <a style="color: black; text-decoration: none" href="https://unsplash.com/photos/magic-keyboard-beside-mug-and-click-pen-VieM9BdZKFo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+</div>
 </div>
 </div>
 </template>

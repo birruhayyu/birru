@@ -25,7 +25,7 @@
                 </div>
               </v-expand-transition>
               <div class="attribution" style="color: white; opacity: 0.7">
-              Photo by <a href="https://unsplash.com/@aaronweiss?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Aaron Weiss</a> on <a href="https://unsplash.com/photos/woman-in-sweater-sits-on-green-boat-on-dock-8bUnDiV2aJg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+              Photo by <a style="color: white; text-decoration: none" href="https://unsplash.com/@aaronweiss?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Aaron Weiss</a> on <a style="color: white; text-decoration: none" href="https://unsplash.com/photos/woman-in-sweater-sits-on-green-boat-on-dock-8bUnDiV2aJg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
               </div>
             </v-img>
           </v-card>
@@ -61,8 +61,8 @@
                 </p>
                 </div>
               </v-expand-transition>
-              <div class="attribution" style="color: white; opacity: 0.7">
-                Photo by <a href="https://unsplash.com/@clemhlrdt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Clément Hélardot</a> on <a href="https://unsplash.com/photos/black-and-silver-laptop-computer-on-table-95YRwf6CNw8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+              <div class="attribution" style="color: black; opacity: 0.7">
+                Photo by <a style="color: black; text-decoration: none" href="https://unsplash.com/@clemhlrdt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Clément Hélardot</a> on <a style="color: black; text-decoration: none" href="https://unsplash.com/photos/black-and-silver-laptop-computer-on-table-95YRwf6CNw8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
               </div>
             </v-img>
           </v-card>
@@ -100,7 +100,7 @@
                 </div>
               </v-expand-transition>
               <div class="attribution" style="opacity: 0.7">
-              Photo by <a href="https://unsplash.com/@charlesdeluvio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">charlesdeluvio</a> on <a href="https://unsplash.com/photos/black-and-gray-laptop-computer-HTDVSbFsy3U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+              Photo by <a style="color: black; text-decoration: none" href="https://unsplash.com/@charlesdeluvio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">charlesdeluvio</a> on <a style="color: black; text-decoration: none" href="https://unsplash.com/photos/black-and-gray-laptop-computer-HTDVSbFsy3U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
               </div> 
             </v-img>
           </v-card>

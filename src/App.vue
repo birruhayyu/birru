@@ -198,7 +198,9 @@ export default {
 }
 .attribution {
   position: absolute;
-  bottom: 8px;
-  left: 16px;
+  bottom: 8px; 
+  font-size: 14px;
+  width: 100%; 
+  text-align: center;
 }
 </style>

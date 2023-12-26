@@ -11,7 +11,7 @@
     <v-col cols="4" :class="{box: !isSmall, small: isSmall}">
       <v-img :src="require('../assets/lang.jpg')" style="object-fit:cover; width: 100%; height: 100%" cover>
       <div class="attribution" style="opacity: 0.7;color: white">
-        Photo by <a href="https://unsplash.com/@leookubo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Leonardo Toshiro Okubo</a> on <a href="https://unsplash.com/photos/unknown-person-writing-on-chalkboard-jBSTNenQxok?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        Photo by <a style="color: white; text-decoration: none" href="https://unsplash.com/@leookubo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Leonardo Toshiro Okubo</a> on <a style="color: white; text-decoration: none" href="https://unsplash.com/photos/unknown-person-writing-on-chalkboard-jBSTNenQxok?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       </div>
       </v-img>
     </v-col>
@@ -28,7 +28,7 @@
     <v-col cols="4" class="small" v-if="isSmall">
       <v-img :src="require('../assets/data2.jpg')" style="object-fit:cover; width: 100%; height: 100%" :class="{small: isSmall}">
       <div class="attribution" style="opacity: 0.7; color: white">
-        Photo by <a href="https://unsplash.com/@mjessier?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Myriam Jessier</a> on <a href="https://unsplash.com/photos/person-using-macbook-pro-on-black-table-eveI7MOcSmw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        Photo by <a style="color: black; text-decoration: none" href="https://unsplash.com/@mjessier?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Myriam Jessier</a> on <a style="color: black; text-decoration: none" href="https://unsplash.com/photos/person-using-macbook-pro-on-black-table-eveI7MOcSmw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       </div>
       </v-img>
     </v-col>
@@ -42,8 +42,8 @@
     </v-col>
     <v-col cols="4" class="box" v-if="!isSmall">
       <v-img :src="require('../assets/data2.jpg')" style="object-fit:cover; width: 100%; height: 100%" cover>
-      <div class="attribution" style="opacity: 0.7; color: white">
-        Photo by <a href="https://unsplash.com/@mjessier?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Myriam Jessier</a> on <a href="https://unsplash.com/photos/person-using-macbook-pro-on-black-table-eveI7MOcSmw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      <div class="attribution" style="opacity: 0.7; color: black">
+        Photo by <a style="color: black; text-decoration: none" href="https://unsplash.com/@mjessier?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Myriam Jessier</a> on <a style="color: black; text-decoration: none" href="https://unsplash.com/photos/person-using-macbook-pro-on-black-table-eveI7MOcSmw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       </div>
       </v-img>
     </v-col>
@@ -51,8 +51,8 @@
   <v-row class="d-flex justify-center align-center margin-remove">
     <v-col cols="4" :class="{box: !isSmall, small: isSmall}">
       <v-img :src="require('../assets/troubleshoot.jpg')" style="object-fit:cover; width: 100%; height: 100%" cover>
-      <div class="attribution" style="opacity: 0.7; color: white">
-      Photo by <a href="https://unsplash.com/@bermixstudio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Bermix Studio</a> on <a href="https://unsplash.com/photos/a-phone-with-a-stethoscope-on-top-of-it-l8uCymHXI-g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      <div class="attribution" style="opacity: 0.7; color: black">
+      Photo by <a style="color: black; text-decoration: none" href="https://unsplash.com/@bermixstudio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Bermix Studio</a> on <a style="color: black; text-decoration: none" href="https://unsplash.com/photos/a-phone-with-a-stethoscope-on-top-of-it-l8uCymHXI-g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       </div>
       </v-img>
     </v-col>
@@ -69,7 +69,7 @@
     <v-col cols="4" class="small" v-if="isSmall">
       <v-img :src="require('../assets/weight.jpg')" style="object-fit:cover; width: 100%; height: 100%" :class="{small: isSmall}">
       <div class="attribution" style="opacity: 0.7; color: white">
-       Photo by <a href="https://unsplash.com/@bermixstudio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Bermix Studio</a> on <a href="https://unsplash.com/photos/a-phone-with-a-stethoscope-on-top-of-it-l8uCymHXI-g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+       Photo by <a style="color: black; text-decoration: none" href="https://unsplash.com/@bermixstudio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Bermix Studio</a> on <a style="color: black; text-decoration: none" href="https://unsplash.com/photos/a-phone-with-a-stethoscope-on-top-of-it-l8uCymHXI-g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       </div>
       </v-img>
     </v-col>
@@ -84,7 +84,7 @@
     <v-col cols="4" class="box" v-if="!isSmall">
       <v-img :src="require('../assets/weight.jpg')" style="object-fit:cover; width: 100%; height: 100%" cover>
       <div class="attribution" style="opacity: 0.7; color: white">
-        Photo by <a href="https://unsplash.com/@victorfreitas?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Victor Freitas</a> on <a href="https://unsplash.com/photos/person-locking-gym-plates-on-barbell-KIzBvHNe7hY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        Photo by <a style="color: white; text-decoration: none" href="https://unsplash.com/@victorfreitas?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Victor Freitas</a> on <a style="color:white; text-decoration: none" href="https://unsplash.com/photos/person-locking-gym-plates-on-barbell-KIzBvHNe7hY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       </div> 
       </v-img>
     </v-col>
