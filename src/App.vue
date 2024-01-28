@@ -19,15 +19,12 @@ import MyFooter from './components/MyFooter.vue'
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
     HomePage,
-    // AboutMe,
     MyEducation,
     MyExperience,
     MyProjects,
     AboutYou,
     MyFooter
-    // HireMe
   }
 }
 </script>
@@ -199,7 +196,7 @@ export default {
 .attribution {
   position: absolute;
   bottom: 8px; 
-  font-size: 14px;
+  font-size: 12px;
   width: 100%; 
   text-align: center;
 }

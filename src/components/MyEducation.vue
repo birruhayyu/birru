@@ -1,43 +1,35 @@
-
 <template>
-<div  id="my-education" >
+  <div id="my-education">
     <v-row class="justify-center align-center" style="width: 100%; padding-top: 80px">
-      <p style="font-size: 24px; letter-spacing: 10px; width: fit-content"><i>"Contentment is my goal.<br>Curiosity is my drive.<br>Learning is my tool."</i></p>
+      <p style="font-size: 24px; letter-spacing: 10px; width: fit-content">
+        <i>"Contentment is my goal.<br>Curiosity is my drive.<br>Learning is my tool."</i>
+      </p>
     </v-row>
-    </div>
-<!-- <div class="justify-center align-center d-flex" >
-  </div> -->
-<v-row class="justify-center align-center d-flex" style="padding-top: 80px; margin-bottom: 100px">
-<v-col>
-  <v-row class="justify-center align-center">
-    <h2 style="font-size: 100px;transform: scale(.7, 1); color:primary; font-family:vogue; width: fit-content" class="title">EDUCATION</h2>
-    <v-icon size="100">mdi-school</v-icon>
-  </v-row>
-</v-col>
-<v-col>
-  <v-row class="edu-list"> 
-  <v-timeline side="end">
-      <v-timeline-item
-        v-for="item in items"
-        :key="item.id"
-        :dot-color="item.color"
-        size="small"
-      >
-        <v-alert
-          :value="true"
-          class="edu"
-        >
-        <p>{{item.time}}</p>
-        <v-divider :color="item.color" style="opacity: 1;" thickness="1"></v-divider>
-        <p>{{item.school}}</p>
-        <p>{{item.place}}</p>
-        <p>{{item.title}}</p>
-        </v-alert>
-      </v-timeline-item>
-    </v-timeline>
-  </v-row>
-</v-col>
-</v-row>
+
+    <v-row class="justify-center align-center d-flex" style="padding-top: 80px; margin-bottom: 100px">
+      <v-col>
+        <v-row class="justify-center align-center">
+          <h2 style="font-size: 100px; transform: scale(.7, 1); color: primary; font-family: vogue; width: fit-content" class="title">EDUCATION</h2>
+          <v-icon size="100">mdi-school</v-icon>
+        </v-row>
+      </v-col>
+      <v-col>
+        <v-row class="edu-list">
+          <v-timeline side="end">
+            <v-timeline-item v-for="item in items" :key="item.id" :dot-color="item.color" size="small">
+              <v-alert :value="true" class="edu">
+                <p>{{ item.time }}</p>
+                <v-divider :color="item.color" style="opacity: 1;" thickness="1"></v-divider>
+                <p>{{ item.school }}</p>
+                <p>{{ item.place }}</p>
+                <p>{{ item.title }}</p>
+              </v-alert>
+            </v-timeline-item>
+          </v-timeline>
+        </v-row>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>
@@ -48,53 +40,35 @@ export default {
   },
   data() {
     return {
-      education:[
-        {"time": "July 2009 - August 2013", "place": "Jakarta, Indonesia", "school": "University of Indonesia", "title": "Bachelor of Psychology"},
-        {"time": "September 2014 - February 2016", "place": "Bristol, UK", "school": "University of Bristol", "title": "M.Ed. Educational Policy and Development"},
-        {"time": "October 2020 - September 2023", "place": "Saarbrücken, Germany", "school": "Universität des Saarlandes", "title": "M.Sc. Educational Technology"},
+      education: [
+        { "time": "July 2009 - August 2013", "place": "Jakarta, Indonesia", "school": "University of Indonesia", "title": "Bachelor of Psychology" },
+        { "time": "September 2014 - February 2016", "place": "Bristol, UK", "school": "University of Bristol", "title": "M.Ed. Educational Policy and Development" },
+        { "time": "October 2020 - September 2023", "place": "Saarbrücken, Germany", "school": "Universität des Saarlandes", "title": "M.Sc. Educational Technology" },
       ],
       items: [
-        {
-          id: 1,
-          color: 'warning',
-          icon: 'mdi-information',
-          time: 'July 2009 - August 2013',
-          place: "Jakarta, Indonesia", 
-          school: "University of Indonesia", 
-          title: "Bachelor of Psychology"
-        },
-        {
-          id: 2,
-          color: '#2C3E50',
-          icon: 'mdi-alert-circle',
-          time: "September 2014 - February 2016",
-          place: "Bristol, UK", 
-          school: "University of Bristol", 
-          title: "M.Ed. Educational Policy and Development"
-        },
-        {
-          id: 3,
-          color: 'warning',
-          icon: 'mdi-information',
-          time: "October 2020 - September 2023",
-          place: "Saarbrücken, Germany", 
-          school: "Universität des Saarlandes", 
-          title: "M.Sc. Educational Technology"
-        },
+        { id: 1, color: 'warning', icon: 'mdi-information', time: 'July 2009 - August 2013', place: "Jakarta, Indonesia", school: "University of Indonesia", title: "Bachelor of Psychology" },
+        { id: 2, color: '#2C3E50', icon: 'mdi-alert-circle', time: "September 2014 - February 2016", place: "Bristol, UK", school: "University of Bristol", title: "M.Ed. Educational Policy and Development" },
+        { id: 3, color: 'warning', icon: 'mdi-information', time: "October 2020 - September 2023", place: "Saarbrücken, Germany", school: "Universität des Saarlandes", title: "M.Sc. Educational Technology" },
       ],
       isAnimated: false
     }
   },
-  mounted(){
-    if (window.innerWidth >= 1400){
-      this.isAnimated = true;
+  mounted() {
+    this.isAnimated = window.innerWidth >= 1400;
+    window.addEventListener('resize', this.resizeWeb);
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.resizeWeb);
+  },
+  methods: {
+    resizeWeb() {
+      this.isAnimated = window.innerWidth >= 1400;
     }
   }
-  
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
 h3 {
   margin: 40px 0 0;

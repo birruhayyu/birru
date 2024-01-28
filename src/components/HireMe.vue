@@ -1,14 +1,8 @@
 <template>
-<v-card
-    class="mx-auto"
-    max-width="300"
-  >
-  <v-text-field
-      label="Email"
-    v-model="userData.email"></v-text-field>
-    <v-text-field label="Message" v-model="userData.password"></v-text-field>
-  <v-btn @click="registerUser">Submit</v-btn>
-    
+  <v-card class="mx-auto" max-width="300">
+    <v-text-field v-model="userData.email" label="Email"></v-text-field>
+    <v-text-field v-model="userData.password" label="Message"></v-text-field>
+    <v-btn @click="registerUser">Submit</v-btn>
   </v-card>
 </template>
 
@@ -20,13 +14,20 @@ export default {
   },
   data() {
     return {
-
+      userData: {
+        email: '',
+        password: ''
+      }
+    }
+  },
+  methods: {
+    registerUser() {
+      console.log('User Registered:', this.userData);
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;

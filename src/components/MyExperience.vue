@@ -1,120 +1,34 @@
 <template>
-<div id="my-experience">
+  <div id="my-experience">
     <p id="scroll-text" class="scroll-ani" style="color: grey;">EXPERIENCE</p>
   </div>
   <div style="max-height: fit-content; width: 100%">
     <v-row class="d-flex justify-center align-center experience" style="width: fit-content">
-      <v-col>
-        <v-row class="d-flex justify-center align-center" style="width: 100%">
+      <v-col v-for="(item, index) in experience" :key="index">
         <v-hover v-slot="{ isHovering, props }">
-          <v-card v-if="!aboutme" class="thumbnails" v-bind="props" @click="aboutme = true">
-            <v-img
-              :aspect-ratio="9/16"
-              cover
-              :src="require('../assets/me.jpg')"
-            >
+          <v-card v-if="!selectedCard(index)" class="thumbnails" v-bind="props" @click="selectCard(index)">
+            <v-img :aspect-ratio="9/16" cover :src="require(`../assets/${item.image}`)">
               <v-expand-transition>
-                <div
-                  v-if="isHovering || isSmall"
-                  class="d-flex transition-fast-in-fast-out black-trans v-card--reveal text-h3 align-center justify-center text-shades-white"
-                  style="height: 100%"
-                >
-                <p style="font-size: 24px">
-                  {{experience[0].time}}<br><i>{{experience[0].title}}</i>
-                </p>
+                <div v-if="isHovering || isSmall" class="d-flex transition-fast-in-fast-out black-trans v-card--reveal text-h3 align-center justify-center text-shades-white" style="height: 100%">
+                  <p style="font-size: 24px">{{ item.time }}<br><i>{{ item.title }}<br>{{ item.title2 ? `${item.title2}` : '' }}</i></p>
                 </div>
               </v-expand-transition>
               <div class="attribution" style="color: white; opacity: 0.7">
-              Photo by <a style="color: white; text-decoration: none" href="https://unsplash.com/@aaronweiss?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Aaron Weiss</a> on <a style="color: white; text-decoration: none" href="https://unsplash.com/photos/woman-in-sweater-sits-on-green-boat-on-dock-8bUnDiV2aJg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                Photo by <a :style="{ color: 'white', textDecoration: 'none' }" :href="item.photoCredit.link">{{ item.photoCredit.name }}</a> on <a :style="{ color: 'white', textDecoration: 'none' }" :href="item.photoCredit.photoLink">Unsplash</a>
               </div>
             </v-img>
           </v-card>
-          <v-card elevation="6" v-if="aboutme" class="thumbnails" v-bind="props" @click="aboutme = false" style="padding: 5px">
-            <p style="font-size: 24px">{{experience[0].title}}</p>
-            <p style="font-size: 20px"><i>{{experience[0].company}}</i></p>
-            <p style="font-size: 20px; padding-bottom: 30px">{{experience[0].place}}</p>
+          <v-card elevation="6" v-if="selectedCard(index)" class="thumbnails" v-bind="props" @click="deselectCard(index)" style="padding: 5px">
+            <p style="font-size: 24px">{{ item.title }}</p>
+            <p style="font-size: 24px">{{ item.title2 ? item.title2 : '' }}</p>
+            <p style="font-size: 20px"><i>{{ item.company }}</i></p>
+            <p style="font-size: 20px; padding-bottom: 30px">{{ item.place }}</p>
             <v-divider style="padding-bottom: 30px" thickness="2"></v-divider>
-            <ol density="compact" v-for="task of experience[0].tasks" :key="task" style="background: transparent; text-align: left; padding-left: 10px">
-              <v-list-item density="compact" style="font-size: 18px" prepend-icon="mdi-vector-point">{{task}}</v-list-item>
+            <ol density="compact" v-for="task in item.tasks" :key="task" style="background: transparent; text-align: left; padding-left: 10px">
+              <v-list-item density="compact" style="font-size: 18px" prepend-icon="mdi-vector-point">{{ task }}</v-list-item>
             </ol>
           </v-card>
         </v-hover>
-        </v-row>
-      </v-col>
-      <v-col>
-        <v-row class="d-flex justify-center align-center">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card v-if="!skills" class="thumbnails" v-bind="props" @click="skills = true">
-            <v-img
-              :aspect-ratio="9/16"
-              cover
-              :src="require('../assets/job.jpg')"
-            >
-              <v-expand-transition>
-                <div
-                  v-if="isHovering || isSmall"
-                  class="d-flex transition-fast-in-fast-out black-trans v-card--reveal text-h3 align-center justify-center text-shades-white"
-                  style="height: 100%;"
-                >
-                <p style="font-size: 24px">
-                  {{experience[1].time}}<br><i>{{experience[1].title}}<br>{{experience[1].title2}}</i>
-                </p>
-                </div>
-              </v-expand-transition>
-              <div class="attribution" style="color: black; opacity: 0.7">
-                Photo by <a style="color: black; text-decoration: none" href="https://unsplash.com/@clemhlrdt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Clément Hélardot</a> on <a style="color: black; text-decoration: none" href="https://unsplash.com/photos/black-and-silver-laptop-computer-on-table-95YRwf6CNw8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-              </div>
-            </v-img>
-          </v-card>
-          <v-card elevation="6" v-if="skills" class="thumbnails" v-bind="props" @click="skills = false">
-            <p style="font-size: 24px">{{experience[1].title}}</p>
-            <p style="font-size: 24px">{{experience[1].title2}}</p>
-            <p style="font-size: 20px"><i>{{experience[1].company}}</i></p>
-            <p style="font-size: 20px; padding-bottom: 30px">{{experience[1].place}}</p>
-            <v-divider style="padding-bottom: 30px" thickness="2"></v-divider>
-            <ol density="compact" v-for="task of experience[1].tasks" :key="task" style="background: transparent; text-align: left; padding-left: 10px">
-              <v-list-item density="compact" style="font-size: 18px" prepend-icon="mdi-vector-point">{{task}}</v-list-item>
-            </ol>
-          </v-card>
-        </v-hover>
-        </v-row>
-      </v-col>
-      <v-col>
-        <v-row class="d-flex justify-center align-center">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card v-if="!language" class="thumbnails" v-bind="props" @click="language=true">
-            <v-img
-              :aspect-ratio="9/16"
-              cover
-              :src="require('../assets/skil.jpg')"
-            >
-              <v-expand-transition>
-                <div
-                  v-if="isHovering || isSmall"
-                  class="d-flex transition-fast-in-fast-out black-trans v-card--reveal text-h3 align-center justify-center text-shades-white"
-                  style="height: 100%;"
-                >
-                <p style="font-size: 24px">
-                  {{experience[2].time}}<br><i>{{experience[2].title}}</i>
-                </p>
-                </div>
-              </v-expand-transition>
-              <div class="attribution" style="opacity: 0.7">
-              Photo by <a style="color: black; text-decoration: none" href="https://unsplash.com/@charlesdeluvio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">charlesdeluvio</a> on <a style="color: black; text-decoration: none" href="https://unsplash.com/photos/black-and-gray-laptop-computer-HTDVSbFsy3U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-              </div> 
-            </v-img>
-          </v-card>
-          <v-card elevation="6" v-if="language" class="thumbnails" v-bind="props" @click="language=false">
-            <p style="font-size: 24px">{{experience[2].title}}</p>
-            <p style="font-size: 20px"><i>{{experience[2].company}}</i></p>
-            <p style="font-size: 20px; padding-bottom: 30px">{{experience[2].place}}</p>
-            <v-divider style="padding-bottom: 30px" thickness="2"></v-divider>
-            <ol density="compact" v-for="task of experience[2].tasks" :key="task" style="background: transparent; text-align: left; padding-left: 10px">
-              <v-list-item density="compact" style="font-size: 18px" prepend-icon="mdi-vector-point">{{task}}</v-list-item>
-            </ol>
-          </v-card>
-        </v-hover>
-        </v-row>
       </v-col>
     </v-row>
     <v-row class="justify-center align-center" style="height: 5vw; padding-top: 100px; padding-bottom: 80px">
@@ -129,26 +43,46 @@ export default {
   props: {
     msg: String
   },
-  data(){
-    return{
-      language: false,
-      aboutme: false,
-      skills: false,
-      experience:[
-        {"time": "Nov 2016 - Nov 2019", "place": "Indonesia", "company": "Mondo Surf Village", "title": "Resort manager", "tasks": ["Manage overall operation, budgetary, and activities", "Recruite employees, and develop human resources", "Plan, evaluate, and improve the holiday programs", "Manage the staff", "Handle guests feedback"]},
-        {"time": "April 2021 - Sept 2023", "place": "Germany", "company": "Ianeo solutions Gmbh", "title": "Working student", "title2": "(Software development)", "tasks": ["Develop front-end using VueJs, HTML, Javascript, and CSS", "Develop APIs","Integrate SQL database, back-end, and front-end code", "Develop back-end using NodeJs and PYTHON", "Debug and troubleshoot", "Maintain and clean code"]},
-        {"time": "September 2023 - Now", "place": "Germany", "company": "Ianeo solutions Gmbh", "title": "Web/software developer", "tasks": ['Develop a web application','Develop backend using PHP', 'Develop plugins with Javascript', 'Develop front-end using HTML, CSS; and Twig', 'Learn new technology in Shopware']},
+  data() {
+    return {
+      selectedCardIndex: null,
+      experience: [
+        { "time": "Nov 2016 - Nov 2019", "place": "Indonesia", "company": "Mondo Surf Village", "title": "Resort manager", "title2": null, "tasks": ["Manage overall operation, budgetary, and activities", "Recruit employees, and develop human resources", "Plan, evaluate, and improve the holiday programs", "Manage the staff", "Handle guests feedback"], "image": "me.jpg", "photoCredit": { name: "Aaron Weiss", link: "https://unsplash.com/@aaronweiss?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash", photoLink: "https://unsplash.com/photos/woman-in-sweater-sits-on-green-boat-on-dock-8bUnDiV2aJg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" } },
+        { "time": "April 2021 - Sept 2023", "place": "Germany", "company": "Ianeo solutions Gmbh", "title": "Working student", "title2": "(Software development)", "tasks": ["Develop front-end using VueJs, HTML, Javascript, and CSS", "Develop APIs", "Integrate SQL database, back-end, and front-end code", "Develop back-end using NodeJs and PYTHON", "Debug and troubleshoot", "Maintain and clean code"], "image": "job.jpg", "photoCredit": { name: "Clément Hélardot", link: "https://unsplash.com/@clemhlrdt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash", photoLink: "https://unsplash.com/photos/black-and-silver-laptop-computer-on-table-95YRwf6CNw8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" } },
+        { "time": "September 2023 - Now", "place": "Germany", "company": "Ianeo solutions Gmbh", "title": "Web/software developer", "title2": null, "tasks": ['Develop a web application', 'Develop backend using PHP', 'Develop plugins with Javascript', 'Develop front-end using HTML, CSS; and Twig', 'Learn new technology in Shopware'], "image": "skil.jpg", "photoCredit": { name: "charlesdeluvio", link: "https://unsplash.com/@charlesdeluvio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash", photoLink: "https://unsplash.com/photos/black-and-gray-laptop-computer-HTDVSbFsy3U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" } },
       ],
       isSmall: false,
-    }
+    };
   },
-  mounted(){
-    if (window.innerWidth < 900){
-      this.isSmall = true;
-    }
-  }
-}
+  computed: {
+    isSmallScreen() {
+      return window.innerWidth < 900;
+    },
+  },
+  methods: {
+    selectedCard(index) {
+      return this.selectedCardIndex === index;
+    },
+    selectCard(index) {
+      this.selectedCardIndex = index;
+    },
+    deselectCard() {
+      this.selectedCardIndex = null;
+    },
+  },
+  mounted() {
+    window.addEventListener('resize', this.resizeWeb);
+    this.isSmall = this.isSmallScreen;
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.resizeWeb);
+  },
+  resizeWeb() {
+    this.isSmall = this.isSmallScreen;
+  },
+};
 </script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
