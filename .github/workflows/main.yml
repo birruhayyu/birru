@@ -11,4 +11,4 @@ jobs:
       with:
         username: 'birruhayyu'
         reponame: 'birru'
-        token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+        token: ${{ secrets.ACTIONS_PATH }} # Leave this line unchanged
