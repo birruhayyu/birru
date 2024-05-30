@@ -27,7 +27,7 @@
         <v-row>
           <v-col cols="2"></v-col>
           <v-col cols="8" style="display: flex">
-            <v-img :src="require('../assets/birru2.jpg')" class="my-pic"></v-img>
+            <v-img :src="require('../assets/birru2.png')" class="my-pic"></v-img>
           </v-col>
           <v-col cols="2"></v-col>
         </v-row>
