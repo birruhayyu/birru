@@ -53,7 +53,8 @@ export default {
         { 'title': 'Experience', 'id': '#my-experience' },
         { 'title': 'Projects', 'id': '#my-project' },
         { 'title': 'Hire Me', 'id': 'mailto:birru.hayyu@gmail.com' },
-        { 'title': 'Download CV', 'id': '../files/resume.pdf' }
+        { 'title': 'Download CV', 'id': '../files/cv.pdf' },
+        { 'title': 'Certificate', 'id': '../files/AI_for_bussiness_strategy.pdf' }
       ]
     };
   },
