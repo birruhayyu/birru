@@ -73,14 +73,14 @@
       </div>
       </v-img>
     </v-col> -->
-    <v-col cols="4" class="box">
+    <!-- <v-col cols="4" class="box">
       <v-sheet elevation="2" style="width: 100%; height: 100%; padding:15px">
         <v-list-item-title class="project-title">{{projects[2].title}}</v-list-item-title>
         <v-divider></v-divider>
         <p style="padding: 10px">{{projects[2].project}}<a href="https://github.com/birruhayyu/training_app_api">here</a>.</p>
         <p><b>Technology/Language: </b> {{projects[2].technology}}</p> 
       </v-sheet>
-    </v-col>
+    </v-col> -->
     <!-- <v-col cols="4" class="box" v-if="!isSmall">
       <v-img :src="require('../assets/training_app.jpg')" style="object-fit:cover; width: 100%; height: 100%" cover>
       <div class="attribution" style="opacity: 0.7; color: white">
