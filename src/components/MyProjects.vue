@@ -66,13 +66,13 @@
     </v-col>
   </v-row>
   <v-row class="d-flex justify-center align-center margin-remove">
-    <v-col cols="4" class="small" v-if="isSmall">
+    <!-- <v-col cols="4" class="small" v-if="isSmall">
       <v-img :src="require('../assets/training_app.jpg')" style="object-fit:cover; width: 100%; height: 100%" :class="{small: isSmall}">
       <div class="attribution" style="opacity: 0.7; color: white">
        Photo by <a style="color: black; text-decoration: none" href="https://unsplash.com/@bermixstudio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Bermix Studio</a> on <a style="color: black; text-decoration: none" href="https://unsplash.com/photos/a-phone-with-a-stethoscope-on-top-of-it-l8uCymHXI-g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       </div>
       </v-img>
-    </v-col>
+    </v-col> -->
     <v-col cols="4" class="box">
       <v-sheet elevation="2" style="width: 100%; height: 100%; padding:15px">
         <v-list-item-title class="project-title">{{projects[2].title}}</v-list-item-title>
@@ -81,13 +81,13 @@
         <p><b>Technology/Language: </b> {{projects[2].technology}}</p> 
       </v-sheet>
     </v-col>
-    <v-col cols="4" class="box" v-if="!isSmall">
+    <!-- <v-col cols="4" class="box" v-if="!isSmall">
       <v-img :src="require('../assets/training_app.jpg')" style="object-fit:cover; width: 100%; height: 100%" cover>
       <div class="attribution" style="opacity: 0.7; color: white">
         Photo by <a style="color: white; text-decoration: none" href="https://unsplash.com/@victorfreitas?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Victor Freitas</a> on <a style="color:white; text-decoration: none" href="https://unsplash.com/photos/person-locking-gym-plates-on-barbell-KIzBvHNe7hY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       </div> 
       </v-img>
-    </v-col>
+    </v-col> -->
   </v-row>
  </v-container> 
 </template>
